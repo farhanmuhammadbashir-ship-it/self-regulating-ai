@@ -60,5 +60,10 @@ This ensures that high error signals trigger a rapid stabilization response, whi
 **Farhan Muhammad Bashir**
 *Researching autonomous adaptive systems.*
 
+[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/farhan-rajput)
+
+**Topics:** `machine-learning`, `adaptive-systems`, `homeostasis`, `python`, `autonomous-agents`, `research`
+*Researching autonomous adaptive systems.*
+
 ---
 *© 2026 All Rights Reserved.*
