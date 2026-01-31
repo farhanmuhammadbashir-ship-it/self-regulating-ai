@@ -5,5 +5,6 @@ class SelfRegulator:
         self.lr = lr
 
     def adjust(self, error):
-        self.lr *= np.exp(-error)
+        # Dampen the error signal to prevent LR from vanishing too quickly
+        self.lr *= np.exp(-error * 0.01)
         return self.lr
