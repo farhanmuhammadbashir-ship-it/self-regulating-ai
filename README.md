@@ -52,7 +52,10 @@ self-regulating-ai/
 
 ## 🔬 Core Concept
 The system uses an exponential decay feedback loop:
-$$ LR_{t+1} = LR_t \times e^{-\text{error} \times \lambda} $$
+
+```math
+LR_{t+1} = LR_t \times e^{-error \times \lambda}
+```
 
 This ensures that high error signals trigger a rapid stabilization response, while low error allows for fine-tuning.
 
