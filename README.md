@@ -9,29 +9,29 @@ In production, AI models often fail silently. Distributions shift, confidence dr
 
 ```mermaid
 graph TD
-    Data[Incoming Data Stream] --> BaseModel[Base Model (RandomForest)]
-    Data --> Monitoring[Monitoring Layer]
+    Data["Incoming Data Stream"] --> BaseModel["Base Model (RandomForest)"]
+    Data --> Monitoring["Monitoring Layer"]
     
-    BaseModel --> Pred[Predictions & Probs]
+    BaseModel --> Pred["Predictions & Probs"]
     Pred --> Monitoring
     
     subgraph "Failure Signals"
-    Monitoring --> Entropy[Entropy (Uncertainty)]
-    Monitoring --> Drift[Drift (Dist. Shift)]
-    Monitoring --> Conf[Confidence Trend]
+    Monitoring --> Entropy["Entropy (Uncertainty)"]
+    Monitoring --> Drift["Drift (Dist. Shift)"]
+    Monitoring --> Conf["Confidence Trend"]
     end
     
-    Entropy --> MetaModel[Meta-Monitoring Model]
+    Entropy --> MetaModel["Meta-Monitoring Model"]
     Drift --> MetaModel
     Conf --> MetaModel
     
-    MetaModel --> FailProb[Failure Probability]
-    FailProb --> Controller[Decision Controller]
+    MetaModel --> FailProb["Failure Probability"]
+    FailProb --> Controller["Decision Controller"]
     
     Controller --> Action{Action}
-    Action --> Continue[CONTINUE (Healthy)]
-    Action --> Warn[WARN (Risk)]
-    Action --> Fallback[FALLBACK (Manual Override)]
+    Action --> Continue["CONTINUE (Healthy)"]
+    Action --> Warn["WARN (Risk)"]
+    Action --> Fallback["FALLBACK (Manual Override)"]
 ```
 
 ## 3. Failure Signals Explained
